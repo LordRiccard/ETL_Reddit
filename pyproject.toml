@@ -1,0 +1,23 @@
+[project]
+name = "etl-reddit"
+version = "1.0.0"
+description = ""
+authors = [
+    {name = "LordRiccard", email = "106322393+LordRiccard@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy",
+    "praw",
+    "dotenv",
+    "yake",
+    "sqlalchemy",
+    "mysql-connector-python"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
