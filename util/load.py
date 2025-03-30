@@ -1,9 +1,8 @@
-from sqlalchemy import Column, Date, Float, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String, create_engine, Engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.types import Text, DateTime
 from dotenv import load_dotenv
 import os
-import pandas as pd
 import csv
 
 base = declarative_base()
@@ -30,7 +29,6 @@ def create_table (engine):
     base.metadata.create_all(engine)
 
 def load_from_file (engine, input_path):
-    #df = pd.read_csv('../output/transformed.csv')
     Session = sessionmaker(bind=engine)
 
     with open(input_path, encoding='utf-8', newline='\n') as csv_file:

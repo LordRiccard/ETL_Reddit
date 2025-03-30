@@ -45,7 +45,6 @@ def transform (input_path, output_path):
 
     df = removing_posts_by_mods(df)
 
-    # Changing 'created' column
     df['created'] = pd.to_datetime(df['created'], unit='s')
 
     df = extract_keywords(df)

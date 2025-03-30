@@ -6,11 +6,10 @@ import pandas as pd
 def setup_praw ():
     load_dotenv()
 
-    reddit = praw.Reddit(client_id = os.getenv("client_id"),
-                         client_secret = os.getenv("client_secret"),
-                         user_agent = os.getenv("user_agent"))
+    return praw.Reddit(client_id = os.getenv("client_id"),
+                       client_secret = os.getenv("client_secret"),
+                       user_agent = os.getenv("user_agent"))
 
-    return reddit
 
 def get_data (subreddit):
     list_author = []
